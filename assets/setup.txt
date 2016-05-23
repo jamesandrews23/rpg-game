@@ -1,1 +1,1 @@
-set up assests folder
+The assests folder will store all of our images and sprites
