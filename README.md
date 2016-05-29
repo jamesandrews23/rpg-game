@@ -11,6 +11,10 @@ Sandbox
 
 http://phaser.io/sandbox
 
+Phaser Chains for Intellij plugin. This is a great plugin for intellij. It lets you search the API very easily.
+
+https://bitbucket.org/boniatillo/phaserchains
+
 Instructios for setting up intellij with github
 
 If you don't already have github installed go to https://git-scm.com/download/win this will start the download for windows
@@ -29,3 +33,9 @@ then click the + to add a new module select the local or mounted folder then jus
 will be added and you can open them up in a web browser.
 
 You can make commits just like we do at work.
+
+Examples:
+
+I think this is a good example of getting other characters to follow
+http://phaser.io/examples/v2/p2-physics/distance-constraint
+
