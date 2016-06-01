@@ -56,7 +56,9 @@ function update() {
 		player.animations.play('down');
 	}
 	else {
-		player.animations.stop();
+		player.animations.stop(null, true);
 	}
+
+
 
 }
