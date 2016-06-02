@@ -5,6 +5,7 @@
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameContainer', { preload: preload, create: create, update: update });
 var player;
 var cursors;
+var direction = "down";
 
 function preload() {
 	game.load.image('background','assets/tests/debug-grid-1920x1920.png');
@@ -35,27 +36,44 @@ function update() {
 	//have to always reset the player's velocity otherwise when you move him he'll keep going
 	player.body.setZeroVelocity();
 
+
 	if (cursors.left.isDown)
 	{
 		player.body.moveLeft(300);
 		player.animations.play('left');
+		direction = "left";
 	}
 	else if (cursors.right.isDown)
 	{
 		player.body.moveRight(300);
 		player.animations.play('right');
+		direction = "right";
 	}
 	else if (cursors.up.isDown)
 	{
 		player.body.moveUp(300);
 		player.animations.play('up');
+		direction = "up";
 	}
 	else if (cursors.down.isDown)
 	{
 		player.body.moveDown(300);
 		player.animations.play('down');
+		direction = "down";
 	}
 	else {
 		player.animations.stop(null, true);
+		if(direction === "left"){
+			player.frame = 4;
+		}else if(direction === "right"){
+			player.frame = 7;
+		}else if(direction === "up"){
+			player.frame = 10;
+		}else{
+			player.frame = 1;
+		}
+
+
 	}
+
 }
