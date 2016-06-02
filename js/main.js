@@ -2,7 +2,7 @@
 	bare bones main.js file for phaser
 	edit at your own risk:)
 */
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameContainer', { preload: preload, create: create, update: update });
 var player;
 var cursors;
 
