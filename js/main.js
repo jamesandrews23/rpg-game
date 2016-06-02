@@ -6,6 +6,8 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameContainer', { preload: pr
 var player;
 var cursors;
 var direction = "down";
+var speed;
+var spaceKey;
 
 function preload() {
 	game.load.image('background','assets/tests/debug-grid-1920x1920.png');
@@ -14,6 +16,8 @@ function preload() {
 }
 
 function create() {
+	spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+
 	//set up the background and the player
 	game.add.sprite(0, 0, 'background');
 	game.world.setBounds(0, 0, 1920, 1920);
@@ -39,25 +43,49 @@ function update() {
 
 	if (cursors.left.isDown)
 	{
-		player.body.moveLeft(300);
+		if(spaceKey.isDown)
+		{
+			speed = 500;
+		}else{
+			speed = 300;
+		}
+		player.body.moveLeft(speed);
 		player.animations.play('left');
 		direction = "left";
 	}
 	else if (cursors.right.isDown)
 	{
-		player.body.moveRight(300);
+		if(spaceKey.isDown)
+		{
+			speed = 500;
+		}else{
+			speed = 300;
+		}
+		player.body.moveRight(speed);
 		player.animations.play('right');
 		direction = "right";
 	}
 	else if (cursors.up.isDown)
 	{
-		player.body.moveUp(300);
+		if(spaceKey.isDown)
+		{
+			speed = 500;
+		}else{
+			speed = 300;
+		}
+		player.body.moveUp(speed);
 		player.animations.play('up');
 		direction = "up";
 	}
 	else if (cursors.down.isDown)
 	{
-		player.body.moveDown(300);
+		if(spaceKey.isDown)
+		{
+			speed = 500;
+		}else{
+			speed = 300;
+		}
+		player.body.moveDown(speed);
 		player.animations.play('down');
 		direction = "down";
 	}
