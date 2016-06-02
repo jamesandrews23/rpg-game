@@ -14,7 +14,7 @@ function preload() {
 
 function create() {
 	//set up the background and the player
-	game.add.tileSprite(0, 0, 1920, 1920, 'background');
+	game.add.sprite(0, 0, 'background');
 	game.world.setBounds(0, 0, 1920, 1920);
 	game.physics.startSystem(Phaser.Physics.P2JS);
 	//setting the player in center for fun
@@ -58,7 +58,4 @@ function update() {
 	else {
 		player.animations.stop(null, true);
 	}
-
-
-
 }
