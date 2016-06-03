@@ -11,7 +11,7 @@ for top down rpg games
 * [tiled] (http://www.mapeditor.org/) An open source map tile map editor
 * [gamefromscratch.com] (http://www.gamefromscratch.com/post/2015/10/14/Tiled-Map-Editor-Tutorial-Series.aspx) This has
 info on games and tutorials for tiled
-* [opengameart.org] http://opengameart.org/ Contains a lot of royalty free sprites
+* [opengameart.org] (http://opengameart.org/) Contains a lot of royalty free sprites
 
 [Phaser Chains]: https://bitbucket.org/boniatillo/phaserchains
 
